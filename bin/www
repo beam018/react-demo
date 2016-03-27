@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-var debug = require('debug')('slashpixels');
-var app = require('../app');
-var config = require('config');
+const debug = require('debug')('slashpixels');
+const app = require('../app');
+const config = require('config').default;
 
 app.set('port', config.port);
 
