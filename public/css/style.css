@@ -1,0 +1,119 @@
+html, body {
+    background-color: #F7F8F9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFF;
+    width: 100%;
+    padding: 10px;
+    word-spacing: 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 94px;
+}
+
+.search {
+    display: inline-block;
+    height: 37px;
+    width: 690px;
+}
+
+.search__form {
+    overflow: auto;
+    height: 37px;
+}
+
+.search__input {
+    display: block;
+    height: 100%;
+    width: 611px;
+    float: left;
+    padding: 0 11px;
+    margin: 0;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    border-radius: 1px 0 0 1px;
+}
+
+.search__btn {
+    display: block;
+    height: 100%;
+    width: 77px;
+    float: left;
+    border: none;
+    background-color: #F7D444;
+    box-shadow: inset 0px 1px 0px 1px #F9DF73;
+}
+
+.search-result {
+    padding-top: 4px;
+    margin: 0 68px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search-result-item {
+    display: block;
+    width: 206px;
+    height: 187px;
+    border: 1px solid #DDDEDF;
+    border-radius: 3px;
+    margin: 15px 13px 0;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.search-result-item__preview {
+    display: block;
+}
+
+.search-result-item__info {
+    height: 37px;
+    line-height: 37px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.info__author {
+    flex-grow: 0;
+    color: #EB4988;
+}
+
+.info__avatar {
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+}
+
+.info__likes {
+    flex-grow: 1;
+    text-align: right;
+    color: #4C5050;
+
+}
+
+.info__likes span {
+    display: inline-block;
+    padding-left: 12px;
+    margin-left: 7px;
+    background: url(http://placehold.it/10x10) left center no-repeat;
+}
+
+.info__likes span:first-child {
+    margin: 0;
+}
+
+.footer {
+    height: 100px;
+}
+

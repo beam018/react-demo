@@ -1,7 +1,21 @@
 doctype html
-html
+
+html(lang='en')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='UTF-8')
+    title Slashpixels
+    link(rel='stylesheet', href='css/style.css')
+
   body
+
+    header
+      a.logo(href='/')
+        img(src='http://placehold.it/74x37', alt='')
+      .search
+        form.search__form(action='', method='POST')
+          input.search__input(type='text')
+          button.search__btn Go
+
     block content
+
+    footer.footer
