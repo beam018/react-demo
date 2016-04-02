@@ -1,3 +1,5 @@
+@import url(/fonts/fonts.css);
+
 html, body {
     background-color: #F7F8F9;
     margin: 0;
@@ -118,6 +120,8 @@ footer {
     line-height: 72px;
     background-color: #fff;
     color: #221F1F;
+    font-family: 'brandon_grotesque_regularRg', sans-serif;
+    font-size: 1em;
 }
 
 .footer-logo,
