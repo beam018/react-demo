@@ -2,7 +2,7 @@ extends layout
 
 block content
   .search-result
-    each item in data
+    each item in data.results
       a.search-result-item(href='#{item.link}')
         img.search-result-item__preview(src='#{item.preview}', alt='')
         .search-result-item__info.info

@@ -3,9 +3,12 @@ import { resolve } from 'path';
 const config = require('config').default;
 const adConfig = config.adaptor;
 
+const results = require(resolve(process.cwd(), adConfig.src));
+
 const fileAdaptor = {
   get: () => Promise.resolve({
-    data: require(resolve(process.cwd(), adConfig.src))
+    results,
+    count: results.length
   })
 };
 

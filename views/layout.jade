@@ -7,14 +7,7 @@ html(lang='en')
     link(rel='stylesheet', href='css/style.css')
 
   body
-
-    header.header
-      a.logo(href='/')
-        img(src='/img/logo.svg', alt='')
-      .search
-        form.search__form(action='', method='POST')
-          input.search__input(type='text')
-          button.search__btn Go
+    include header
 
     block content
 
