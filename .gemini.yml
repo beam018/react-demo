@@ -1,0 +1,7 @@
+rootUrl: http://localhost:3333
+screenshotsDir: './screens'
+
+browsers:
+  chrome:
+    desiredCapabilities:
+      browserName: chrome
