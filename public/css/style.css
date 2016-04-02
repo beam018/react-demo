@@ -118,11 +118,9 @@ header {
 
 footer {
     height: 72px;
-    line-height: 72px;
     background-color: #fff;
     color: #221F1F;
-    font-family: 'brandon_grotesque_regularRg', sans-serif;
-    font-size: 1em;
+    font: 12px/72px 'brandon_grotesque_regularRg', sans-serif;
 }
 
 .footer-logo,
