@@ -2,24 +2,14 @@ extends layout
 
 block content
   .search-result
-    a.search-result-item(href='')
-      img.search-result-item__preview(src='http://placehold.it/206x152', alt='')
-      .search-result-item__info.info
-        .info__author
-          img.info__avatar(src='http://placehold.it/17x17', alt='')
-          | Bob Foo
-        .info__likes
-          span.info__views 0
-          span.info__comments 0
-          span.info__likes 0
-
-    // TODO: выпилить этот код про вставку
-    script.
-      var item = document.querySelector('.search-result-item'),
-      fragment = document.createDocumentFragment();
-
-      for (var i = 0; i < 29; i++) {
-        fragment.appendChild(item.cloneNode(true));
-      }
-
-      document.querySelector('.search-result').appendChild(fragment);
+    each item in data
+      a.search-result-item(href='#{item.link}')
+        img.search-result-item__preview(src='#{item.preview}', alt='')
+        .search-result-item__info.info
+          .info__author
+            img.info__avatar(src='#{item.user.avatar}', alt='')
+            | #{item.user.name}
+          .info__likes
+            span.info__views #{item.views}
+            span.info__comments #{item.comments}
+            span.info__likes #{item.likes}
