@@ -4,6 +4,12 @@ html, body {
     background-color: #F7F8F9;
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+.content-wrapper {
+    min-height:100%;
+    position:relative;
 }
 
 header {
@@ -58,8 +64,9 @@ header {
 }
 
 .search-result {
-    padding-top: 4px;
-    margin: 0 68px 32px;
+    /* padding-bottom: bottom-offset + footer-height */
+    padding: 4px 0 104px;
+    margin: 0 68px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -126,6 +133,9 @@ footer {
     background-color: #fff;
     color: #221F1F;
     font: 12px/72px 'brandon_grotesque_regularRg', sans-serif;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 .footer-logo,
