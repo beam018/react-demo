@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon --exec npm run babel-node -- ./bin/www",
-    "babel-node": "babel-node --presets=es2015 --ignore=''"
+    "babel-node": "babel-node --presets=es2015 --ignore=''",
+    "lint": "eslint ."
   },
   "dependencies": {
     "body-parser": "~1.8.1",
@@ -22,5 +23,6 @@
     "eslint": "^2.8.0",
     "eslint-plugin-react": "^5.0.1",
     "nodemon": "^1.9.1"
-  }
+  },
+  "pre-commit": ["lint", "test"]
 }
