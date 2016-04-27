@@ -1,3 +1,4 @@
 export default {
-  port: 3333
+  port: 3333,
+  env: 'development'
 };

@@ -11,9 +11,15 @@ var users = require('./routes/users');
 
 var app = express();
 
+const config = require('config').default;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+if (config.env === 'development') {
+  app.locals.pretty = true;
+}
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
