@@ -1,1 +1,1 @@
-export default { info: console.log };
+export default { info: console.log, error: console.error };
