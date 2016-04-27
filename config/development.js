@@ -1,6 +1,8 @@
+import { resolve } from 'path';
+
 export default {
   adaptor: {
     type: 'file',
-    src: 'data/index.json'
+    src: resolve(process.cwd() + '/data')
   }
 };
