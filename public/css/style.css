@@ -66,20 +66,20 @@ header {
 .search-result {
     /* padding-bottom: bottom-offset + footer-height */
     padding: 4px 0 104px;
-    margin: 0 68px;
+    margin: 0 81px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-family: 'brandon_grotesquemedium';
 }
 
 .search-result-item {
     display: block;
     width: 206px;
-    height: 187px;
     border: 1px solid #DDDEDF;
     border-radius: 3px;
     margin: 15px 13px 0;
-    padding: 3px;
+    padding: 5px;
     text-decoration: none;
 }
 
@@ -88,8 +88,9 @@ header {
 }
 
 .search-result-item__info {
-    height: 37px;
-    line-height: 37px;
+    margin: 5px 0 0;
+    height: 23px;
+    line-height: 23px;
 }
 
 .info {
@@ -102,12 +103,16 @@ header {
 .info__author {
     flex-grow: 0;
     color: #EB4988;
+    font-size: 11px;
 }
 
 .info__avatar {
     width: 17px;
     height: 17px;
     border-radius: 100%;
+    position: relative;
+    bottom: -5px;
+    margin-right: 5px;
 }
 
 .info__likes {
@@ -122,6 +127,7 @@ header {
     padding-left: 12px;
     margin-left: 7px;
     background: url(http://placehold.it/10x10) left center no-repeat;
+    font-size: 8px;
 }
 
 .info__likes span:first-child {
