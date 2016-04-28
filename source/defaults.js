@@ -1,7 +1,7 @@
-export default function() {
+export default () => {
   return {
     results: [],
     count: 0,
     q: ''
-  }
-}
+  };
+};

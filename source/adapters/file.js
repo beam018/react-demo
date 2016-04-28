@@ -20,12 +20,12 @@ const fileAdaptor = {
 
         data = JSON.parse(data);
 
-        resolve({
+        return resolve({
           results: data,
           count: data.length
         });
       });
-    })
+    });
   }
 };
 

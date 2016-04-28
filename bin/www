@@ -1,7 +1,12 @@
 #!/usr/bin/env node
+
+import { resolve, join } from 'path';
+
+require(join(resolve(__dirname, '..'), 'utils'));
+
 const debug = require('debug')('slashpixels');
-const app = require('../app');
-const config = require('config').default;
+const app = requireRoot('app');
+const config = requireDefault('config');
 
 app.set('port', config.port);
 

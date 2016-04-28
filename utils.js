@@ -1,8 +1,8 @@
-global.requireRoot = function(name) {
-  return require(__dirname + '/' + name);
-}
+global.requireRoot = name => {
+  return require(process.cwd() + '/' + name);
+};
 
-global.requireDefault = function(name) {
+global.requireDefault = name => {
   let module;
 
   try {
@@ -12,4 +12,4 @@ global.requireDefault = function(name) {
   }
 
   return module.default || module;
-}
+};

@@ -2,9 +2,13 @@ import express from 'express';
 
 import source from '../source';
 
+/* eslint-disable new-cap */
+
 const router = express.Router();
 
-router.get('/', function(req, res) {
+/* eslint-enable new-cap */
+
+router.get('/', (req, res) => {
   source.get(req)
     .then(data => {
       res.render('index', { data });
