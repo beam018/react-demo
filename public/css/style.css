@@ -66,7 +66,7 @@ header {
 .search-result {
     /* padding-bottom: bottom-offset + footer-height */
     padding: 4px 0 104px;
-    margin: 0 81px;
+    margin: 0 85px;
     display: flex;
     flex-wrap: wrap;
     font-family: 'brandon_grotesquemedium';
