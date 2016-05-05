@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+require("babel-register");
+
 import { resolve, join } from 'path';
 
 require(join(resolve(__dirname, '..'), 'utils'));
