@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 router.get('/react', (req, res) => {
   source.get(req)
     .then(data => {
-      res.render('index2', { reactData: reactApp() });
+      res.render('index2', { reactData: reactApp(data) });
     });
 });
 
