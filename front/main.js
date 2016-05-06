@@ -2,8 +2,8 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 
-import Hello from './components/hello';
+import App from './components/app';
 
 export default function (data) {
-  return renderToString(React.createFactory(Hello)(data));
+  return renderToString(React.createFactory(App)(data));
 }

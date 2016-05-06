@@ -6,10 +6,8 @@ html(lang='en')
     title Slashpixels
     link(rel='stylesheet', href='css/style.css')
 
-  body
-    .content-wrapper
-      include header
-
+  body#app
       block content
+        | !{html}
 
-      include footer
+  script(src='/js/main.js')
