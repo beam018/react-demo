@@ -1,9 +1,5 @@
-// need to use all React object
-import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { render } from 'react-dom'
 
-import App from './components/app';
+import core from './core'
 
-export default function (data) {
-  return renderToString(React.createFactory(App)(data));
-}
+render(core, document.getElementById('root'));

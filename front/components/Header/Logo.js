@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Logo extends React.Component {
+export default class Logo extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -13,5 +13,3 @@ class Logo extends React.Component {
     );
   }
 }
-
-export default Logo;

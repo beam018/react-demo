@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SerpItem extends React.Component {
+export default class SerpItem extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -26,5 +26,3 @@ class SerpItem extends React.Component {
     );
   }
 }
-
-export default SerpItem;

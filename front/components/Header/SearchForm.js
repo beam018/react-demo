@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SearchForm extends React.Component {
+export default class SearchForm extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -9,7 +9,7 @@ class SearchForm extends React.Component {
     return (
       <div className='search'>
         <form action='/search' method='GET' className='search__form'>
-          <input 
+          <input
             type='text'
             name='q'
             value={this.context.q}
@@ -26,5 +26,3 @@ class SearchForm extends React.Component {
 SearchForm.contextTypes = {
   q: React.PropTypes.string
 }
-
-export default SearchForm;

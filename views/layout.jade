@@ -4,10 +4,14 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     title Slashpixels
-    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='/css/style.css')
 
-  body#app
+  body
+    #root
       block content
         | !{html}
 
-  script(src='/js/main.js')
+    script
+      | window.__PRELOADED_STATE__ = !{state}
+
+    script(src='/js/bundle.js')

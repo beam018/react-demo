@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Logo from '../logo/logo';
-import SearchForm from '../searchForm/searchForm';
+import Logo from './Header/Logo';
+import SearchForm from './Header/SearchForm';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -17,5 +17,3 @@ class Header extends React.Component {
     );
   }
 }
-
-export default Header;
