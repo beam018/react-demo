@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import React from 'react';
 
 import { querySubmit, queryChange } from '../../actions/queryActions'
+import { resultsUpdate } from '../../actions/resultsActions'
 import { debounce } from 'lodash'
 
 class SearchForm extends React.Component {
@@ -18,7 +19,12 @@ class SearchForm extends React.Component {
   onSubmit(e) {
     e.preventDefault()
 
-    this.props.text && this.props.dispatch(querySubmit())
+    const actions = [
+      // querySubmit(),
+      resultsUpdate()
+    ]
+
+    this.props.text && this.props.dispatch(actions)
   }
 
   render() {
