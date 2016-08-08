@@ -21,8 +21,10 @@ const fileAdaptor = {
         data = JSON.parse(data);
 
         return resolve({
-          results: data,
-          count: data.length
+          results: {
+            docs: data,
+            count: data.length
+          }
         });
       });
     });

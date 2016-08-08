@@ -11,7 +11,7 @@ const source = {
 
     return adaptor.get(req)
       .then(data => {
-        data.q = reqData.q;
+        data.query = reqData.query;
 
         data = merge(getDefaults(), data);
 
