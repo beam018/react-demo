@@ -11,7 +11,10 @@ const source = {
 
     return adaptor.get(req)
       .then(data => {
-        data.query = reqData.query;
+        data.query = {
+          text: reqData.query,
+          submited: false
+        }
 
         data = merge(getDefaults(), data);
 

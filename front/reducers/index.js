@@ -5,5 +5,5 @@ import query from './queryReducer'
 
 export default combineReducers({
   results,
-  query
+  query,
 })

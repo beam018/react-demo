@@ -1,10 +1,12 @@
 import { connect } from 'react-redux'
 
-import React from 'react';
+import React from 'react'
+
+// import { debounce } from 'lodash'
+import { browserHistory } from 'react-router'
 
 import { querySubmit, queryChange } from '../../actions/queryActions'
 import { resultsUpdate } from '../../actions/resultsActions'
-import { debounce } from 'lodash'
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -24,7 +26,13 @@ class SearchForm extends React.Component {
       resultsUpdate(this.props.text)
     ]
 
-    this.props.text && this.props.dispatch(actions)
+    this.props.dispatch(actions)
+
+    this.changeLocation()
+  }
+
+  changeLocation() {
+    browserHistory.push(`/?query=${this.props.text}`)
   }
 
   render() {
