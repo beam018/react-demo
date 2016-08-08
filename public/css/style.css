@@ -1,174 +1,192 @@
 @import url(/fonts/fonts.css);
 
 html, body {
-    background-color: #F7F8F9;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  background-color: #F7F8F9;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
 }
 
 .content-wrapper {
-    min-height:100%;
-    position:relative;
+  min-height:100%;
+  position:relative;
+}
+
+.content-wrapper:after{
+    content: '';
+    display: block;
 }
 
 header {
-    background-color: #FFF;
-    width: 100%;
-    padding: 10px 18px;
-    word-spacing: 0;
-    box-sizing: border-box;
+  background-color: #FFF;
+  width: 100%;
+  padding: 10px 18px;
+  word-spacing: 0;
+  box-sizing: border-box;
 }
 
 .logo {
-    display: inline-block;
-    vertical-align: top;
-    margin: 4px 16px 0 0;
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px 16px 0 0;
 }
 
 .logo img {
-    display: block;
+  display: block;
 }
 
 .search {
-    display: inline-block;
-    height: 37px;
+  display: inline-block;
+  height: 37px;
 }
 
 .search__input {
-    display: block;
-    height: 36px;
-    width: 612px;
-    float: left;
-    font: 16px 'brandon_grotesque_regularRg';
-    padding: 0 11px;
-    margin: 1px 0 0 0;
-    border: 1px solid #231f20;
-    box-sizing: border-box;
-    box-shadow: 0 0 1px 1px #c9c8c8;
-    position: relative;
-    z-index: 20;
+  display: block;
+  height: 36px;
+  width: 612px;
+  float: left;
+  font: 16px 'brandon_grotesque_regularRg';
+  padding: 0 11px;
+  margin: 1px 0 0 0;
+  border: 1px solid #231f20;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px 1px #c9c8c8;
+  position: relative;
+  z-index: 20;
 }
 
 .search__btn {
-    display: block;
-    height: 36px;
-    margin: 1px 0 0 0;
-    width: 77px;
-    float: left;
-    border: none;
-    box-shadow: -2px 0 2px 0 #F7D444;
-    position: relative;
-    z-index: 10;
-    background: #F7D444 url(/img/search-icon.svg) center center no-repeat;
+  display: block;
+  height: 36px;
+  margin: 1px 0 0 0;
+  width: 77px;
+  float: left;
+  border: none;
+  box-shadow: -2px 0 2px 0 #F7D444;
+  position: relative;
+  z-index: 10;
+  background: #F7D444 url(/img/search-icon.svg) center center no-repeat;
 }
 
 .search-result {
-    /* padding-bottom: bottom-offset + footer-height */
-    padding: 4px 0 104px;
-    margin: 0 85px;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 'brandon_grotesquemedium';
+  /* padding-bottom: bottom-offset + footer-height */
+  padding: 4px 0 104px;
+  margin: 0 85px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'brandon_grotesquemedium';
 }
 
 .search-result-item {
-    display: block;
-    width: 206px;
-    border: 1px solid #DDDEDF;
-    border-radius: 3px;
-    margin: 15px 13px 0;
-    padding: 5px;
-    text-decoration: none;
+  display: block;
+  width: 206px;
+  border: 1px solid #DDDEDF;
+  border-radius: 3px;
+  margin: 15px 13px 0;
+  padding: 5px;
+  text-decoration: none;
 }
 
 .search-result-item__preview {
-    display: block;
+  display: block;
 }
 
 .search-result-item__info {
-    margin: 5px 0 0;
-    height: 23px;
-    line-height: 23px;
+  margin: 5px 0 0;
+  height: 23px;
+  line-height: 23px;
 }
 
 .info {
-    display: flex;
-    justify-content: space-between;
-    white-space: nowrap;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .info__author {
-    flex-grow: 0;
-    color: #EB4988;
-    font-size: 11px;
+  flex-grow: 0;
+  color: #EB4988;
+  font-size: 11px;
 }
 
 .info__avatar {
-    width: 17px;
-    height: 17px;
-    border-radius: 100%;
-    position: relative;
-    bottom: -5px;
-    margin-right: 5px;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  position: relative;
+  bottom: -5px;
+  margin-right: 5px;
 }
 
 .info__likes {
-    flex-grow: 1;
-    text-align: right;
-    color: #4C5050;
+  flex-grow: 1;
+  text-align: right;
+  color: #4C5050;
 
 }
 
 .info__likes span {
-    display: inline-block;
-    padding-left: 12px;
-    margin-left: 7px;
-    background: url(http://placehold.it/10x10) left center no-repeat;
-    font-size: 8px;
+  display: inline-block;
+  padding-left: 12px;
+  margin-left: 7px;
+  background: url(http://placehold.it/10x10) left center no-repeat;
+  font-size: 8px;
 }
 
 .info__likes span:first-child {
-    margin: 0;
+  margin: 0;
 }
 
 footer {
-    height: 72px;
-    background-color: #fff;
-    color: #221F1F;
-    font: 12px/72px 'brandon_grotesque_regularRg', sans-serif;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+  height: 72px;
+  background-color: #fff;
+  color: #221F1F;
+  font: 12px/72px 'brandon_grotesque_regularRg', sans-serif;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer-logo,
 .footer-nav,
 .copyright {
-    display: inline-block;
+  display: inline-block;
 }
 .footer-logo {
-    margin: 0 23px;
+  margin: 0 23px;
 }
 
 .footer-logo img {
-    width: 42px;
-    height: 22px;
-    margin-bottom: -6px;
+  width: 42px;
+  height: 22px;
+  margin-bottom: -6px;
 }
 
 .footer-nav {
-    margin: 0 0 0 45px;
+  margin: 0 0 0 45px;
 }
 
 .footer-nav a {
-    margin: 0 12px;
-    color: inherit;
-    text-decoration: none;
+  margin: 0 12px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .copyright {
-    margin: 0 37px 0 0;
-    float: right;
+  margin: 0 37px 0 0;
+  float: right;
+}
+
+.sticky-footer-wrapper {
+  min-height: 100%;
+  margin: 0 0 -72px;
+}
+
+.sticky-footer-wrapper:after {
+  content: '';
+  display: block;
 }
