@@ -1,13 +1,13 @@
+import React from 'react'
+
 import { connect } from 'react-redux'
 
-import React from 'react';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-import Header from './Header';
-import Footer from './Footer';
+import SerpList from '../components/SerpList'
 
-import SerpList from './SerpList';
-
-class Layout extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -27,4 +27,4 @@ export default connect(state => {
   return {
     results: state.results.docs
   }
-})(Layout)
+})(Search)
