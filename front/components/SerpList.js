@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SerpItem from '../serp-item/serp-item';
+import SerpItem from './SerpList/SerpItem';
 
-class Serp extends React.Component {
+export default class SerpList extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -28,5 +28,3 @@ class Serp extends React.Component {
     );
   }
 }
-
-export default Serp;

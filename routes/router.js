@@ -1,27 +1,25 @@
-import express from 'express';
+import express from 'express'
 
-import source from '../source';
+import source from '../source'
 
-import reactApp from '../front/main';
+import renderedCore from '../renderCore'
 
-/* eslint-disable new-cap */
-
-const router = express.Router();
-
-/* eslint-enable new-cap */
+const router = express.Router()
 
 router.get('/', (req, res) => {
-  source.get(req)
+  source
+    .get(req)
     .then(data => {
-      res.render('layout', { html: reactApp(data) });
-    });
-});
+      if (req.xhr || req.query.jsondump) {
+        res.json(data.results)
+        res.end()
+      }
 
-router.get('/search', (req, res) => {
-  source.get(req)
-    .then(data => {
-      res.render('layout', { html: reactApp(data) });
-    });
-});
+      res.render('layout', {
+        html: renderedCore,
+        state: JSON.stringify(data)
+      })
+    })
+})
 
-module.exports = router;
+module.exports = router

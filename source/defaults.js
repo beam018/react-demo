@@ -1,7 +1,12 @@
 export default () => {
   return {
-    results: [],
-    count: 0,
-    q: ''
+    results: {
+      docs: [],
+      count: 0
+    },
+    query: {
+      text: '',
+      submited: false
+    }
   };
 };
