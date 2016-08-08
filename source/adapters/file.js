@@ -7,7 +7,7 @@ const adConfig = config.adaptor;
 
 const fileAdaptor = {
   get: (req) => {
-    const q = req.query.q || 'index';
+    const q = req.query.query || 'index';
     const filePath = join(adConfig.src, `${q}.json`);
 
     return new Promise(resolve => {

@@ -4,15 +4,22 @@ import source from '../source'
 
 import renderedCore from '../renderCore'
 
-const router = express.Router();
+const router = express.Router()
 
 router.get('/', (req, res) => {
   source
     .get(req)
-    .then(data => res.render('layout', {
-      html: renderedCore,
-      state: JSON.stringify(data)
-    }));
-});
+    .then(data => {
+      if (req.xhr || req.query.jsondump) {
+        res.json(data.results)
+        res.end()
+      }
 
-module.exports = router;
+      res.render('layout', {
+        html: renderedCore,
+        state: JSON.stringify(data)
+      })
+    })
+})
+
+module.exports = router

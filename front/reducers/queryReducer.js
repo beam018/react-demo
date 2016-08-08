@@ -8,6 +8,7 @@ const query = (state={ text: '', submited: false }, action) => {
       return { ...state, text, submited }
 
     case queryActions.QUERY_UPDATE:
+      // TODO: show suggest on this event
       return { ...state, submited: action.payload.submited }
 
     default:

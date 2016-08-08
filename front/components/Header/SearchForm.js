@@ -20,8 +20,8 @@ class SearchForm extends React.Component {
     e.preventDefault()
 
     const actions = [
-      // querySubmit(),
-      resultsUpdate()
+      querySubmit(),
+      resultsUpdate(this.props.text)
     ]
 
     this.props.text && this.props.dispatch(actions)
@@ -30,7 +30,7 @@ class SearchForm extends React.Component {
   render() {
     return (
       <div className='search'>
-        <form action='/search' method='GET' className='search__form' onSubmit={this.onSubmit.bind(this)}>
+        <form action='/' method='GET' className='search__form' onSubmit={this.onSubmit.bind(this)}>
           <input
             type='text'
             name='query'
