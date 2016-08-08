@@ -1,7 +1,18 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+
+import createLogger from 'redux-logger'
 
 import reducer from './reducers'
 
-// const preloadedState = window.__PRELOADED_STATE__
+let preloadedState
 
-export default createStore(reducer)
+if (typeof window !== 'undefined') {
+  preloadedState = window.__PRELOADED_STATE__
+}
+
+const logger = createLogger()
+const middlewares = applyMiddleware(logger)
+
+const store = createStore(reducer, preloadedState, middlewares)
+
+export default store

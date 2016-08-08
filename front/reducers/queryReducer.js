@@ -1,5 +1,12 @@
+import * as queryActions from '../actions/queryActions'
+
 const query = (state='', action) => {
-  return state
+  switch (action.type) {
+    case queryActions.QUERY_CHANGE:
+      return action.payload
+    default:
+      return state
+  }
 }
 
 export default query

@@ -12,18 +12,10 @@ class Layout extends React.Component {
     super(props)
   }
 
-  getChildContext() {
-    const props = this.props;
-
-    return {
-      q: props.q
-    }
-  }
-
   render() {
     return (
       <div className='content-wrapper'>
-        <Header/>
+        <Header query={this.props.query}/>
         <SerpList results={this.props.results}/>
         <Footer/>
       </div>
@@ -31,14 +23,10 @@ class Layout extends React.Component {
   }
 }
 
-Layout.childContextTypes = {
-  q: React.PropTypes.string
-}
-
 export default connect(state => {
   return {
     results: state.results.docs,
     count: state.results.count,
-    q: state.query
+    query: state.query
   }
 })(Layout)
