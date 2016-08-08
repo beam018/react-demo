@@ -6,6 +6,11 @@ html, body {
   padding: 0;
 }
 
+body {
+  // TODO: responsive, etc
+  min-width: 1024px;
+}
+
 html, body, #root {
   height: 100%;
 }
@@ -69,6 +74,11 @@ header {
   position: relative;
   z-index: 10;
   background: #F7D444 url(/img/search-icon.svg) center center no-repeat;
+  outline: none;
+}
+
+.search__btn:active {
+  background-color: red;
 }
 
 .search-result {
