@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+
+const data = []
+
+names = ['Sir Isaac Newton', 'Louis Pasteur', 'Galileo', 'Marie Curie ', 'Albert Einstein ', 'Charles Darwin ', 'Nikola Tesla ', 'James Clerk Maxwell', 'Aristotle']
+
+for (var i = 0; i < 30; i++) {
+  data.push({
+    link: '#',
+    user: {
+      name: names[Math.round(Math.random() * names.length)],
+      avatar: 'http://placehold.it/17x17',
+      profileLink: '#'
+    },
+    preview: 'http://placehold.it/206x152',
+    views: Math.round(Math.random() * 10000),
+    comments: Math.round(Math.random() * 10000),
+    likes: Math.round(Math.random() * 10000)
+  })
+}
+
+fs.writeFile(path.resolve(__dirname, '../data', `${process.argv[2]}.json`), JSON.stringify(data))
