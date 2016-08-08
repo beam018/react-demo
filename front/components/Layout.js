@@ -15,7 +15,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div className='content-wrapper'>
-        <Header query={this.props.query}/>
+        <Header />
         <SerpList results={this.props.results}/>
         <Footer/>
       </div>
@@ -25,8 +25,6 @@ class Layout extends React.Component {
 
 export default connect(state => {
   return {
-    results: state.results.docs,
-    count: state.results.count,
-    query: state.query
+    results: state.results.docs
   }
 })(Layout)

@@ -4,6 +4,9 @@ export default () => {
       docs: [],
       count: 0
     },
-    query: ''
+    query: {
+      text: '',
+      submited: false
+    }
   };
 };
