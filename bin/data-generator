@@ -4,8 +4,17 @@ const fs = require('fs')
 const path = require('path')
 
 const data = []
-
-const names = ['Sir Isaac Newton', 'Louis Pasteur', 'Galileo', 'Marie Curie ', 'Albert Einstein ', 'Charles Darwin ', 'Nikola Tesla ', 'James Clerk Maxwell', 'Aristotle']
+const names = [
+  'Sir Isaac Newton',
+  'Louis Pasteur',
+  'Galileo',
+  'Marie Curie ',
+  'Albert Einstein ',
+  'Charles Darwin ',
+  'Nikola Tesla ',
+  'James Clerk Maxwell',
+  'Aristotle'
+]
 
 for (var i = 0; i < (~~process.argv[3] || 30); i++) {
   data.push({
@@ -22,4 +31,6 @@ for (var i = 0; i < (~~process.argv[3] || 30); i++) {
   })
 }
 
-fs.writeFile(path.resolve(__dirname, '../data', `${process.argv[2]}.json`), JSON.stringify(data))
+fs.writeFile(path.resolve(__dirname, '../data', `${process.argv[2]}.json`), JSON.stringify(data), function() {
+  console.log(`Generated data for [${process.argv[2]}] request;`)
+})
