@@ -8,8 +8,6 @@ import Layout from './components/Layout'
 
 export default (
   <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path='/' component={Layout}></Route>
-    </Router>
+    <Layout />
   </Provider>
 )
