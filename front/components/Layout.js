@@ -16,7 +16,9 @@ class Layout extends React.Component {
     return (
       <div className='content-wrapper'>
         <Header />
-        <SerpList results={this.props.results}/>
+        <div className='content'>
+          <SerpList results={this.props.results} />
+        </div>
         <Footer/>
       </div>
     );

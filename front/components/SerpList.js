@@ -8,6 +8,12 @@ export default class SerpList extends React.Component {
   }
 
   render() {
+    if (!this.props.results.length) {
+      return (
+        <p>Did not match any documents.</p>
+      )
+    }
+
     return (
       <div className='search-result'>
         {this.props.results.map((item, i) => {

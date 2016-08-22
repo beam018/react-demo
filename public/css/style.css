@@ -81,13 +81,16 @@ header {
   background-color: red;
 }
 
-.search-result {
+.content {
   /* padding-bottom: bottom-offset + footer-height */
   padding: 4px 0 104px;
   margin: 0 85px;
+  font-family: 'brandon_grotesquemedium';
+}
+
+.search-result {
   display: flex;
   flex-wrap: wrap;
-  font-family: 'brandon_grotesquemedium';
 }
 
 .search-result-item {
