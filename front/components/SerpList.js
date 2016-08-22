@@ -8,6 +8,10 @@ export default class SerpList extends React.Component {
   }
 
   render() {
+    if (this.props.page === 'index') {
+      return null
+    }
+
     if (!this.props.results.length) {
       return (
         <p>Did not match any documents.</p>

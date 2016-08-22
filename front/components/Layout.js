@@ -17,7 +17,7 @@ class Layout extends React.Component {
       <div className='content-wrapper'>
         <Header />
         <div className='content'>
-          <SerpList results={this.props.results} />
+          <SerpList results={this.props.results} page={this.props.page} />
         </div>
         <Footer/>
       </div>
@@ -27,6 +27,7 @@ class Layout extends React.Component {
 
 export default connect(state => {
   return {
-    results: state.results.docs
+    results: state.results.docs,
+    page: state.page
   }
 })(Layout)

@@ -11,8 +11,10 @@ router.get('/', (req, res) => {
     .get(req)
     .then(data => {
       if (req.xhr || req.query.jsondump) {
-        res.json(data.results)
-        res.end()
+        return res.json({
+          ...data.results,
+          page: req.page
+        })
       }
 
       res.render('layout', {
