@@ -17,9 +17,9 @@ export default class SerpItem extends React.Component {
           </div>
 
           <div className='info__likes'>
-            <span className='info__views'>{this.props.views}</span>
-            <span className='info__comments'>{this.props.comments}</span>
-            <span className='info__likes'>{this.props.likes}</span>
+            <span className='info__views'><i className='fa fa-eye' aria-hidden={true}></i> {this.props.views}</span>
+            <span className='info__comments'><i className='fa fa-comment-o' aria-hidden={true}></i> {this.props.comments}</span>
+            <span className='info__likes'><i className='fa fa-heart' aria-hidden={true}></i> {this.props.likes}</span>
           </div>
         </div>
       </a>

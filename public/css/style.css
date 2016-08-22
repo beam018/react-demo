@@ -1,4 +1,6 @@
 @import url(/fonts/fonts.css);
+/* TODO: webpack for css */
+@import url('/libs/font-awesome/css/font-awesome.css');
 
 html, body {
   background-color: #F7F8F9;
@@ -126,6 +128,9 @@ header {
   flex-grow: 0;
   color: #EB4988;
   font-size: 11px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 10px;
 }
 
 .info__avatar {
@@ -141,14 +146,12 @@ header {
   flex-grow: 1;
   text-align: right;
   color: #4C5050;
-
 }
 
 .info__likes span {
   display: inline-block;
-  padding-left: 12px;
   margin-left: 7px;
-  background: url(http://placehold.it/10x10) left center no-repeat;
+  white-space: nowrap;
   font-size: 8px;
 }
 
