@@ -5,13 +5,13 @@ const path = require('path')
 
 const data = []
 
-names = ['Sir Isaac Newton', 'Louis Pasteur', 'Galileo', 'Marie Curie ', 'Albert Einstein ', 'Charles Darwin ', 'Nikola Tesla ', 'James Clerk Maxwell', 'Aristotle']
+const names = ['Sir Isaac Newton', 'Louis Pasteur', 'Galileo', 'Marie Curie ', 'Albert Einstein ', 'Charles Darwin ', 'Nikola Tesla ', 'James Clerk Maxwell', 'Aristotle']
 
-for (var i = 0; i < 30; i++) {
+for (var i = 0; i < (~~process.argv[3] || 30); i++) {
   data.push({
     link: '#',
     user: {
-      name: names[Math.round(Math.random() * names.length)],
+      name: names[Math.round(Math.random() * (names.length - 1))],
       avatar: 'http://placehold.it/17x17',
       profileLink: '#'
     },
