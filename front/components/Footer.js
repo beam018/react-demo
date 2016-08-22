@@ -1,17 +1,8 @@
-import React from 'react'
-
-import { Link } from 'react-router'
-import { connect } from 'react-redux'
-
-import { getContent } from '../actions/pagesActions'
+import React from 'react';
 
 class Footer extends React.Component {
   constructor(props) {
     super(props)
-  }
-
-  onClick(page) {
-    this.props.dispatch(getContent(page))
   }
 
   render() {
@@ -22,11 +13,11 @@ class Footer extends React.Component {
         </div>
 
         <nav className='footer-nav'>
-          <Link to='/about' onClick={this.onClick.bind(this, 'about')}>About</Link>
-          <Link to='/contacts' onClick={this.onClick.bind(this, 'contacts')}>Contact</Link>
-          <Link to='/terms' onClick={this.onClick.bind(this, 'terms')}>Terms</Link>
-          <Link to='/privacy' onClick={this.onClick.bind(this, 'privacy')}>Privacy</Link>
-          <Link to='/blog' onClick={this.onClick.bind(this, 'blog')}>Blog</Link>
+          <a href='#'>About</a>
+          <a href='#'>Contact</a>
+          <a href='#'>Terms</a>
+          <a href='#'>Privacy</a>
+          <a href='#'>Blog</a>
         </nav>
 
         <p className='copyright'>Copyright © 2016 SlashPixels. All screenshots © their respective ownres.</p>
@@ -35,6 +26,4 @@ class Footer extends React.Component {
   }
 }
 
-export default connect(state => {
-  return { text: state.page }
-})(Footer)
+export default Footer;

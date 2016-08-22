@@ -16,8 +16,6 @@ const source = {
           submited: false
         }
 
-        data.page = ''
-
         data = merge(getDefaults(), data);
 
         return data;

@@ -7,7 +7,6 @@ export default () => {
     query: {
       text: '',
       submited: false
-    },
-    page: ''
+    }
   };
 };

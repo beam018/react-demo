@@ -4,8 +4,6 @@ import source from '../source'
 
 import renderedCore from '../renderCore'
 
-import contentStub from '../data/contentStub'
-
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -22,15 +20,6 @@ router.get('/', (req, res) => {
         state: JSON.stringify(data)
       })
     })
-})
-
-router.get('/about', (req, res) => {
-  if (req.xhr || req.query.jsondump) {
-    res.send(contentStub)
-  }
-
-  res.send(contentStub)
-  // TODO: server rendering
 })
 
 module.exports = router
