@@ -1,6 +1,13 @@
 `http://localhost:3333`
 
-npm start
+####Install
+`npm i`
+
+####Start Server
+`npm start`
+
+####Build client
+`npm run webpack`
 
 Notes:
 * По хорошему лучше удалить font-awesome и положить простые svg иконки
