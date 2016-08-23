@@ -1,11 +1,7 @@
 @font-face {
     font-family: 'brandon_grotesquebold';
-    src: url('/fonts/brandon_bld_0-webfont.eot');
-    src: url('/fonts/brandon_bld_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/brandon_bld_0-webfont.woff2') format('woff2'),
-         url('/fonts/brandon_bld_0-webfont.woff') format('woff'),
-         url('/fonts/brandon_bld_0-webfont.ttf') format('truetype'),
-         url('/fonts/brandon_bld_0-webfont.svg#brandon_grotesquebold') format('svg');
+    src: url('/fonts/brandon_bld_0-webfont.woff2') format('woff2'),
+         url('/fonts/brandon_bld_0-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -13,36 +9,24 @@
 
 @font-face {
     font-family: 'brandon_grotesquemedium';
-    src: url('/fonts/brandon_med_0-webfont.eot');
-    src: url('/fonts/brandon_med_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/brandon_med_0-webfont.woff2') format('woff2'),
-         url('/fonts/brandon_med_0-webfont.woff') format('woff'),
-         url('/fonts/brandon_med_0-webfont.ttf') format('truetype'),
-         url('/fonts/brandon_med_0-webfont.svg#brandon_grotesquemedium') format('svg');
+    src: url('/fonts/brandon_med_0-webfont.woff2') format('woff2'),
+         url('/fonts/brandon_med_0-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'brandon_grotesque_regularRg';
-    src: url('/fonts/brandon_reg_0-webfont.eot');
-    src: url('/fonts/brandon_reg_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/brandon_reg_0-webfont.woff2') format('woff2'),
-         url('/fonts/brandon_reg_0-webfont.woff') format('woff'),
-         url('/fonts/brandon_reg_0-webfont.ttf') format('truetype'),
-         url('/fonts/brandon_reg_0-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    src: url('/fonts/brandon_reg_0-webfont.woff2') format('woff2'),
+         url('/fonts/brandon_reg_0-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'brandon_grotesqueblack';
-    src: url('/fonts/brandon_blk_0-webfont.eot');
-    src: url('/fonts/brandon_blk_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/brandon_blk_0-webfont.woff2') format('woff2'),
-         url('/fonts/brandon_blk_0-webfont.woff') format('woff'),
-         url('/fonts/brandon_blk_0-webfont.ttf') format('truetype'),
-         url('/fonts/brandon_blk_0-webfont.svg#brandon_grotesqueblack') format('svg');
+    src: url('/fonts/brandon_blk_0-webfont.woff2') format('woff2'),
+         url('/fonts/brandon_blk_0-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -50,12 +34,8 @@
 
 @font-face {
     font-family: 'brandon_grotesquelight';
-    src: url('/fonts/brandon_light_0-webfont.eot');
-    src: url('/fonts/brandon_light_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/brandon_light_0-webfont.woff2') format('woff2'),
-         url('/fonts/brandon_light_0-webfont.woff') format('woff'),
-         url('/fonts/brandon_light_0-webfont.ttf') format('truetype'),
-         url('/fonts/brandon_light_0-webfont.svg#brandon_grotesquelight') format('svg');
+    src: url('/fonts/brandon_light_0-webfont.woff2') format('woff2'),
+         url('/fonts/brandon_light_0-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
