@@ -10,6 +10,10 @@ const fileAdaptor = {
     const q = req.query.query || 'index';
     const filePath = join(adConfig.src, `${q}.json`);
 
+    if (q === 'index') {
+      return Promise.resolve({});
+    }
+
     return new Promise(resolve => {
       readFile(filePath, (err, data) => {
         if (err) {

@@ -7,12 +7,12 @@ import { merge } from 'lodash';
 
 const source = {
   get: (req) => {
-    const reqData = req.query;
+    const q = req.query.query;
 
     return adaptor.get(req)
       .then(data => {
         data.query = {
-          text: reqData.query,
+          text: q,
           submited: false
         }
 
