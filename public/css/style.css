@@ -19,7 +19,6 @@ html, body, #root {
 
 .content-wrapper {
   min-height:100%;
-  height: inherit;
   position:relative;
 }
 

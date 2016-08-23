@@ -1,5 +1,5 @@
 import { render } from 'react-dom'
 
-import core from './core'
+import { getClient } from './core'
 
-render(core, document.getElementById('root'));
+render(getClient(), document.getElementById('root'));

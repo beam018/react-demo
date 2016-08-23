@@ -5,7 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const router = requireRoot('routes/router');
+const router = requireRoot('./router');
 
 const app = express();
 

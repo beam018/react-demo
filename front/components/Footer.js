@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+
+import { Link } from 'react-router'
 
 class Footer extends React.Component {
   constructor(props) {
@@ -6,6 +8,18 @@ class Footer extends React.Component {
   }
 
   render() {
+    const linksData = [
+      { url: '/about', text: 'About' },
+      { url: '/contact', text: 'Contact' },
+      { url: '/terms', text: 'Terms' },
+      { url: '/privacy', text: 'Privacy' },
+      { url: '/blog', text: 'Blog' },
+    ]
+
+    const links = linksData.map((item, idx) => {
+      return (<Link to={item.url} key={idx}>{item.text}</Link>)
+    })
+
     return (
       <footer>
         <div className='footer-logo'>
@@ -13,11 +27,7 @@ class Footer extends React.Component {
         </div>
 
         <nav className='footer-nav'>
-          <a href='#'>About</a>
-          <a href='#'>Contact</a>
-          <a href='#'>Terms</a>
-          <a href='#'>Privacy</a>
-          <a href='#'>Blog</a>
+          {links}
         </nav>
 
         <p className='copyright'>Copyright © 2016 SlashPixels. All screenshots © their respective ownres.</p>

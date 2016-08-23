@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import Logo from './Header/Logo';
-import SearchForm from './Header/SearchForm';
+import { connect } from 'react-redux'
 
-export default class Header extends React.Component {
+import Logo from './Header/Logo'
+import SearchForm from './Header/SearchForm'
+
+class Header extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -11,9 +13,13 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className='header'>
-        <Logo/>
-        <SearchForm/>
+        <Logo dispatch={this.props.dispatch} />
+        <SearchForm {...this.props} />
       </header>
-    );
+    )
   }
 }
+
+export default connect(state => {
+  return { text: state.query.text }
+})(Header)

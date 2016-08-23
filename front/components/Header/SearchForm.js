@@ -1,5 +1,3 @@
-import { connect } from 'react-redux'
-
 import React from 'react'
 
 // import { debounce } from 'lodash'
@@ -8,7 +6,7 @@ import { browserHistory } from 'react-router'
 import { querySubmit, queryChange } from '../../actions/queryActions'
 import { resultsUpdate } from '../../actions/resultsActions'
 
-class SearchForm extends React.Component {
+export default class SearchForm extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -21,18 +19,21 @@ class SearchForm extends React.Component {
   onSubmit(e) {
     e.preventDefault()
 
-    const actions = [
+    this.props.dispatch([
       querySubmit(),
       resultsUpdate(this.props.text)
-    ]
-
-    this.props.dispatch(actions)
+    ])
 
     this.changeLocation()
   }
 
   changeLocation() {
-    browserHistory.push(`/?query=${this.props.text}`)
+    browserHistory.push({
+      pathname: '/search',
+      query: {
+        query: this.props.text
+      }
+    })
   }
 
   render() {
@@ -43,6 +44,7 @@ class SearchForm extends React.Component {
             type='text'
             name='query'
             className='search__input'
+
             placeholder='Rounded illustration with mountain'
 
             value={this.props.text}
@@ -52,10 +54,6 @@ class SearchForm extends React.Component {
           <button className='search__btn'></button>
         </form>
       </div>
-    );
+    )
   }
 }
-
-export default connect(state => {
-  return { text: state.query.text }
-})(SearchForm)

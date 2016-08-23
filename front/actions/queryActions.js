@@ -1,7 +1,7 @@
 export const QUERY_CHANGE = 'QUERY_CHANGE'
 export const QUERY_SUBMIT = 'QUERY_SUBMIT'
 
-export function queryChange(text) {
+export function queryChange(text='') {
   return {
     type: QUERY_CHANGE,
     payload: {
