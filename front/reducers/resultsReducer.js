@@ -1,13 +1,13 @@
-const results = (state={docs: [], count: 0}, action) => {
+const results = (state={docs: [], amount: 0}, action) => {
   switch (action.type) {
     case 'RESULTS_FULFILLED':
-      const { docs, count } = action.payload.data
+      const { docs, amount } = action.payload.data
 
-      return { ...state, docs, count }
+      return { ...state, docs, amount }
 
     case 'RESULTS_REJECTED':
       // TODO: make pretty error noifications
-      console.log('error in results fetching')
+      console.error('Error in results fetching')
 
       return state
 

@@ -7,7 +7,9 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <h1>Welcome!</h1>
+      <section className='content' role='main'>
+        <h1>Welcome!</h1>
+      </section>
     )
   }
 }

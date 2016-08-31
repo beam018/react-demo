@@ -12,7 +12,7 @@ export default class SerpList extends React.Component {
       return null
     }
 
-    if (!this.props.results.length) {
+    if (!this.props.docs.length) {
       return (
         <p>Did not match any documents.</p>
       )
@@ -20,7 +20,7 @@ export default class SerpList extends React.Component {
 
     return (
       <div className='search-result'>
-        {this.props.results.map((item, i) => {
+        {this.props.docs.map((item, i) => {
           return <SerpItem
             key={i}
 
@@ -32,7 +32,7 @@ export default class SerpList extends React.Component {
             views={item.views}
             comments={item.comments}
             likes={item.likes}
-          />;
+          />
         })}
       </div>
     );

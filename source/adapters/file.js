@@ -27,7 +27,7 @@ const fileAdaptor = {
         return resolve({
           results: {
             docs: data,
-            count: data.length
+            amount: data.length
           }
         });
       });

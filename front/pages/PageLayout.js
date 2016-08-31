@@ -14,9 +14,7 @@ class Layout extends React.Component {
     return (
       <div className='content-wrapper'>
         <Header />
-        <section className='content' role='main'>
-          {this.props.children}
-        </section>
+        {this.props.children}
         <Footer/>
       </div>
     )

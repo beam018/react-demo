@@ -2,7 +2,7 @@ export default () => {
   return {
     results: {
       docs: [],
-      count: 0
+      amount: 0
     },
     query: {
       text: '',

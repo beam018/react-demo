@@ -8,6 +8,7 @@ class Footer extends React.Component {
   }
 
   render() {
+    // TODO: move to data
     const linksData = [
       { url: '/about', text: 'About' },
       { url: '/contact', text: 'Contact' },
